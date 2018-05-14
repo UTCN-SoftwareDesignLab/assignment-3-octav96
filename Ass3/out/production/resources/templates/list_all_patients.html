@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<!--     <p th:text="${ bookDtoList }" /> -->
+
+<table>
+    <tbody>
+    <th><td >ID
+    </td>
+
+    <td>Username</td>
+    <td>Password</td>
+    <td>Address</td>
+    <td>Age</td>
+    <td>Role</td>
+    </th>
+    <tr th:each="patient : ${ patients }">
+        <td th:text="${ patient.id }">ID</td>
+        <td th:text="${ patient.name }">Name</td>
+        <td th:text="${ patient.identityCardNumber}">IdentityCardNumber</td>
+        <td th:text="${ patient.personalNumericCode}">PersonalNumericCode</td>
+        <td th:text="${ patient.dateOfBirth}">DateOfBirth</td>
+        <td th:text="${ patient.address}">Address</td>
+    </tr>
+    </tbody>
+</table>
+
+<form action="#" th:action="@{/secretary}" method="get">
+    <p><input type="submit" class="button" value="SECRETARY PAGE" name="SECRETARY PAGE" />
+</form>
+
+</body>
+</html>

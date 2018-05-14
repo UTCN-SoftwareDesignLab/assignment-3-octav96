@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<!--     <p th:text="${ bookDtoList }" /> -->
+
+<table>
+    <tbody>
+    <th><td >ID
+    </td>
+    <td>Title</td>
+    <td>Genre</td>
+    <td>Isbn</td>
+    <td>Author</td>
+    <td>Quantity</td>
+    <td>Price</td>
+    </th>
+    <tr th:each="book : ${ books }">
+        <td th:text="${ book.id }">ID</td>
+        <td th:text="${ book.title }">Title</td>
+        <td th:text="${ book.genre }">Genre</td>
+        <td th:text="${ book.isbn }">Isbn</td>
+        <td th:text="${ book.author }">Title</td>
+        <td th:text="${ book.quantity }">Genre</td>
+        <td th:text="${ book.price }">Isbn</td>
+    </tr>
+    </tbody>
+</table>
+
+<form action="#" th:action="@{/employee}" method="get">
+    <p><input type="submit" class="button" value="EMPLOYEE PAGE" name="EMPLOYEE PAGE" />
+</form>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Result</h1>
+
+<form action="#" th:action="@{/books_by_genre}" method="get">
+    <p><input type="submit" class="button" value="LIST BOOKS BY GENRE" name="LIST BOOKS BY GENRE" />
+</form>
+
+<form action="#" th:action="@{/books_by_author}" method="get">
+    <p><input type="submit" class="button" value="LIST BOOKS BY AUTHOR" name="LIST BOOKS BY AUTHOR" />
+</form>
+
+<form action="#" th:action="@{/books_by_title}" method="get">
+    <p><input type="submit" class="button" value="LIST BOOKS BY TITLE" name="LIST BOOKS BY TITLE" />
+</form>
+
+<form action="#" th:action="@{/sell_book}" method="get">
+    <p><input type="submit" class="button" value="SELL BOOK" name="SELL BOOK" />
+</form>
+
+
+<form action="#" th:action="@{/list_all_books_employee}" method="get">
+    <p><input type="submit" class="button" value="LIST ALL BOOKS" name="all books" />
+</form>
+
+<form action="#" th:action="@{/logout}" method="get">
+    <p><input type="submit" class="button" value="LOGOUT" name="LOGOUT" />
+</form>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Consultation Creation Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/app.js"></script>
+</head>
+
+<body>
+<h1>Form</h1>
+<form action="#" th:action="@{/add_consultation}" th:object="${consultation}" method="post" >
+    <p>DoctorID: <input type="text" th:field="*{doctorId}" /></p>
+    <td th:if="${#fields.hasErrors('doctorId')}" th:errors="*{doctorId}">DoctorId Error</td>
+
+    <p>PatientID: <input type="text" th:field="*{patientId}" /></p>
+    <td th:if="${#fields.hasErrors('patientId')}" th:errors="*{patientId}">PatientId Error</td>
+
+    <p>Date: <input type="date" th:field="*{date}" /></p>
+    <td th:if="${#fields.hasErrors('date')}" th:errors="*{date}">Date Error</td>
+
+    <p>Detail: <input type ="text" th:field="*{detail}" /></p>
+    <td th:if="${#fields.hasErrors('detail')}" th:errors="*{detail}">detail Error</td>
+
+    <p><input type="submit" id="create" value="Submit" /> <input type="reset" value="Reset" /></p>
+
+
+</form>
+
+
+</body>
+</html>
